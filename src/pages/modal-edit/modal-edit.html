@@ -1,0 +1,112 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Historico
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="primary" showWhen="ios">Cancel</span>
+          <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header> 
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>modal-edit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    
+        <!--<form [formGroup]="form">-->
+        <ion-card-header >
+            <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+            <h2 id="header">Quadro Clinico</h2>
+        </ion-card-header>
+        
+        <ion-item>
+            <ion-icon ios="ios-medical" md="md-medical" item-start large></ion-icon>
+            <!-- <h2>Diagnostico</h2>
+            <p class="event-location">Ansiedade, Sindrome do Panico, Depressão, Fobia Social</p> -->
+            <ion-label color="primary" floating>Diagnostico</ion-label>
+            <ion-input>
+                
+            </ion-input>
+          </ion-item>
+          <!-- <button id="edit" ion-button icon-start clear item-end color="danger" >
+            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+            Editar
+          </button> -->
+      
+          <ion-item>
+            <ion-icon ios="ios-flask" md="md-flask" item-start large></ion-icon> 
+            <h2>Medicação</h2>
+            <p class="event-location">Bup, Rivotril, Carbolitium, place, meeds</p>
+          </ion-item>
+          <!-- <button id="edit" ion-button icon-start clear item-end color="danger" >
+            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+            Editar
+          </button> -->
+         
+          <ion-item>
+            <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon>
+            <h2>Evolução do quadro</h2>
+          </ion-item>
+          <ion-card-content id="card-diagnostico">
+            Paciente teve melhora, apresentou evolução no tratamento com a medicação prescrita...
+            <ion-item>
+              <!-- <button ion-button icon-start clear item-end color="danger">
+                <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                Editar
+              </button> -->
+            </ion-item>
+          </ion-card-content>
+          <ion-row no-padding>
+              <ion-col text-center>
+                  <button mat-raised-button color="primary" icon-start>
+                  <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>
+                  CONFIRMAR
+                </button>
+              </ion-col>
+              <ion-col text-right>
+                  <button mat-raised-button color="accent" icon-start>
+                  <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                  Adcionar
+                </button>
+              </ion-col>
+            </ion-row>
+          <!-- <ion-row no-padding>
+            
+            <ion-col text-center>
+              <button ion-button clear small color="primary" icon-start>
+                <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>
+                CONFIRMAR
+              </button>
+            </ion-col>
+            <ion-col text-right>
+              <button ion-button clear small color="primary" icon-start>
+                <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                Adcionar
+              </button>
+            </ion-col>
+          </ion-row> -->
+          <ion-row no-padding>
+              <button mat-raised-button color="primary">Confirmar</button>
+              <button mat-raised-button color="accent" icon-start>
+                  <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                  Adcionar
+              </button>
+             
+          </ion-row>
+          
+          <!--</form>-->
+      
+
+</ion-content>

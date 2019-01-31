@@ -1,0 +1,45 @@
+page-consultas-agendadas {
+    .toolbar {
+        // background-color: white;
+        // background: white;
+        background-color: transparent;
+      }
+    
+      .toolbar-title {
+        font-size: 2.0rem;
+        font-weight: bold;
+      }
+    
+      .content {
+        color: black;
+      }
+      .example-headers-align .mat-expansion-panel-header-title, 
+      .example-headers-align .mat-expansion-panel-header-description {
+        flex-basis: 0;
+      }
+    
+      .example-headers-align .mat-expansion-panel-header-description {
+        justify-content: space-between;
+        align-items: center;
+      }
+      .range-md.range-has-pin {
+        padding-top: 5px;
+    }
+    
+    .card-md {
+      margin: 1px;
+      padding-right: 0;
+      width: calc(110% - 20px);
+      
+    }
+    .item-md {
+      color:#55acee;
+    }
+    #data-div {
+      background-color: cadetblue;
+      text-align: center;
+      color: white;
+      font-size: 15px;
+      height:35px;
+    }
+}

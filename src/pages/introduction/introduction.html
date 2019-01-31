@@ -1,12 +1,12 @@
 <ion-header no-border>
-
+  <!--
   <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
   </ion-navbar>
 
-  <!--
+  
   <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -30,48 +30,51 @@
 
       <ion-row>
         <ion-col text-center>
-          <ion-icon [@slideInUp]="'in'" name="ionic" style="zoom: 3.0;"></ion-icon>
-          <h1>Welcome to the <strong>Big Top</strong></h1>
+          <!-- <ion-icon [@slideInUp]="'in'" name="ionic" style="zoom: 3.0;"></ion-icon> -->
+          <div class="user-avatar">
+            <!--<img src="../../assets/imgs/contact/avatar.jpg" [@slideInUp]="'in'" style="zoom: 3.0;"> -->
+            <h2>Bem-vinda ao app<br> <strong> Dra. Ana Cristina </strong></h2>
+          </div>
         </ion-col>
       </ion-row>
 
       <ion-row style="height: 60%">
         <ion-col text-center>
           <button ion-button color="light" clear style="font-size: 22px;" (click)="nextPage()">
-            Sign in
+            Entrar
           </button>
         </ion-col>
       </ion-row>
 
-      <ion-row>
+      <!-- <ion-row>
         <ion-col text-center>
           <button ion-button color="light" clear>
-            Register
+            Registrar
           </button>
         </ion-col>
-      </ion-row>
+      </ion-row> -->
 
     </ion-slide>
 
     <!-- Slide 1 -->
 
-    <ion-slide>
+    <!-- <ion-slide>
 
       <p [@slideInUp]="slide1State">
-        Find popular venues, unique local experiences and events just for you.
+        Encontre tudo sobre os mais recentes tratamentos,  Dicas de Bem-estar para a sua saude mental.
       </p>
 
-    </ion-slide>
+    </ion-slide> -->
 
     <!-- Slide 2 -->
 
-    <ion-slide>
+    <!-- <ion-slide>
 
       <p [@slideInUp]="slide2State">
-        See where your friends are going so you never miss out on the fun.
+       Teste de nivel de depressao, registro do seu estado emocional para um acompanhamento mais eficiente do estado de saude mental do paciente 
       </p>
 
-    </ion-slide>
+    </ion-slide> -->
 
   </ion-slides>
 

@@ -1,0 +1,287 @@
+<ion-header no-border>
+
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+     Pacientes Agendados
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="outer-content">
+  <ion-list>
+    
+    <!--<div class="fab-container">
+        <ion-fab bottom top right>
+          <button ion-fab mini color="primary" (click)="onSubmit()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-fab>
+      </div> -->
+      <div id="data-div">
+        <p>28/01/2019</p>
+      </div>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 0, key: 'vBvF2FG03kcF2nQNedxyGxQsc7v1'})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-ben.png">
+        </ion-avatar>
+        <h2>ben</h2>
+        <p>Benjamin Button</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          info
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 1, key: '-LMEQHHeVIr7W2NrE9hr' })">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-finn.png">
+        </ion-avatar>
+        <h2>Finn</h2>
+        <p>Finn Von Turing</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 2, key: vBvF2FG03kcF2nQNedxyGxQsc7v1})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-han.png">
+        </ion-avatar>
+        <h2>Han</h2>
+        <p>Han Solo</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 3})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-luke.png">
+        </ion-avatar>
+        <h2>luke</h2>
+        <p>Luke skywalker</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 4})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-rey.png">
+        </ion-avatar>
+        <h2>Rey</h2>
+        <p>Rey skywalker</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary"icon-start >
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+  <ion-list>
+    
+      <div id="data-div">
+        <p>29/01/2019</p>
+      </div>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 4})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-rey.png">
+        </ion-avatar>
+        <h2>Rey</h2>
+        <p>Rey skywalker</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary"icon-start >
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 3})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-luke.png">
+        </ion-avatar>
+        <h2>luke</h2>
+        <p>Luke skywalker</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+  <ion-list>
+    
+      <div id="data-div">
+        <p>30/01/2019</p>
+      </div>
+    
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 1, key: '-LMEQHHeVIr7W2NrE9hr' })">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-finn.png">
+        </ion-avatar>
+        <h2>Finn</h2>
+        <p>Finn Von Turing</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 4})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-rey.png">
+        </ion-avatar>
+        <h2>Rey</h2>
+        <p>Rey skywalker</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary"icon-start >
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item (click)="openModal({charNum: 3})">
+        <ion-avatar item-start>
+          <img src="assets/imgs/pacientes/avatar-luke.png">
+        </ion-avatar>
+        <h2>luke</h2>
+        <p>Luke skywalker</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          msg
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          ligar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>

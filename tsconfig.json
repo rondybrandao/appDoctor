@@ -11,7 +11,21 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": [ "app/*" ],
+      "@assets/*": [ "assets/*" ],
+      "@env": [ "environments/environment" ],
+      "@pages/*": [ "pages/*" ],
+      "@services/*": [ "services/*" ],
+      "@tests/*": [ "./*" ],
+      "@theme/*": [ "theme/*" ]
+    }
   },
   "include": [
     "src/**/*.ts"
@@ -19,7 +33,9 @@
   "exclude": [
     "node_modules",
     "src/**/*.spec.ts",
-    "src/**/__tests__/*.ts"
+    "src/**/__tests__/*.ts",
+    "e2e",
+    "src/pages/home/*.ts"
   ],
   "compileOnSave": false,
   "atom": {

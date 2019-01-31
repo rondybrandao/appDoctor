@@ -1,0 +1,358 @@
+
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Prontuario
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="primary" showWhen="ios">Cancel</span>
+          <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header> 
+
+
+<ion-content class="cards-bg">
+
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{patient.image}}">
+        </ion-avatar>
+        <h2>{{patient.name}}</h2>
+        <p>{{patient.quote}}</p>
+      </ion-item>
+
+  </ion-list>
+    
+    <ion-card>
+        <ion-card-header >
+          <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+          <h2 id="header">Informações Gerais</h2>
+        </ion-card-header>
+        
+        <ion-card-content>
+            <h2 id="title-pront">Nome</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-male" md="md-male" item-start large></ion-icon>
+                <h2 id="title-pront">Pratica atividades fisica?</h2> -->
+                <p id="resp">Benjamin Button</p>
+                <p id="resp">Ben</p>
+            </ion-item>
+        </ion-card-content>
+          
+        <ion-card-content>
+            <h2 id="title-pront">Idade</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon> -->
+                <!-- <h2 id="title-pront">Tem hobbes?</h2> -->
+                <p id="resp">76 anos</p>
+                
+            </ion-item>
+        </ion-card-content>
+
+        <ion-card-content>
+            <h2 id="title-pront">Ocupação</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon> -->
+                <!-- <h2 id="title-pront">Tem hobbes?</h2> -->
+                <p id="resp">Aposentado</p>
+                
+            </ion-item>
+        </ion-card-content>
+
+          <ion-card-content>
+              <h2 id="title-pront">Religião</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon> -->
+                  <!-- <h2 id="title-pront">Tem hobbes?</h2> -->
+                  <p id="resp">Católico</p>
+                  <p id="resp">Não Praticante</p>
+              </ion-item>
+          </ion-card-content>
+            
+          <ion-card-content>
+              <h2 id="title-pront">Orientação Sexual</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon> -->
+                  <!-- <h2 id="title-pront">Tem amigo?</h2> -->
+                  <p id="resp">Heterosexual</p> 
+                </ion-item>
+          </ion-card-content>
+            
+          <ion-card-content>
+              <h2 id="title-pront">Renda Mensal</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                  <h2 id="title-pront">Costuma sair com seus amigos?</h2> -->
+                  <p id="resp">5.500,00</p> 
+              </ion-item>
+          </ion-card-content>
+            
+        </ion-card>
+    
+    <ion-card>
+      
+      <!--<form [formGroup]="form">-->
+      <ion-card-header >
+          <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+          <h2 id="header">Quadro Clinico</h2>
+      </ion-card-header>  
+     
+    <ion-item>
+          <ion-icon ios="ios-medical" md="md-medical" item-start large></ion-icon>
+          <h2>Diagnostico</h2>
+        </ion-item>
+        
+        <ion-card-content id="card-diagnostico">
+          Ansiedade, Sindrome do Panico, Depressão, Fobia Social
+          <ion-item (click)="openQuadroClinico()">
+            <button ion-button  id="edit" icon-start clear item-end color="dark">
+              <ion-icon ios="ios-create" md="md-create" ></ion-icon>
+              Editar
+            </button>
+          </ion-item>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon ios="ios-flask" md="md-flask" item-start large></ion-icon>
+          <h2>Medicação</h2>
+        </ion-item>
+        
+        <ion-card-content id="card-diagnostico">
+          Bup, Rivotril, Carbolitium
+          <ion-item (click)="openEdit()">
+            <button ion-button  id="edit" icon-start clear item-end color="dark">
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Editar
+            </button>
+          </ion-item>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon>
+          <h2>Evolução do quadro</h2>
+        </ion-item>
+        
+        <ion-card-content id="card-diagnostico">
+          Paciente teve melhora, apresentou evolução no tratamento com a medicação prescrita.
+          <ion-item (click)="openEdit()">
+            <button ion-button  id="edit" icon-start clear item-end color="dark">
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Editar
+            </button>
+          </ion-item>
+        </ion-card-content>
+        
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header >
+          <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+          <h2 id="header">Social</h2>
+        </ion-card-header>
+        
+        <ion-card-content>
+            <h2 id="title-pront">Pratica atividades fisica?</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-male" md="md-male" item-start large></ion-icon>
+                <h2 id="title-pront">Pratica atividades fisica?</h2> -->
+                <p id="resp">Sim</p>
+                <p id="resp">Caminhadas</p>
+            </ion-item>
+        </ion-card-content>
+            
+          <ion-card-content>
+              <h2 id="title-pront">Tem hobbes?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon> -->
+                  <!-- <h2 id="title-pront">Tem hobbes?</h2> -->
+                  <p id="resp">Sim</p>
+                  <p id="resp">Cinema</p>
+              </ion-item>
+          </ion-card-content>
+            
+          <ion-card-content>
+              <h2 id="title-pront">Tem amigo?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon> -->
+                  <!-- <h2 id="title-pront">Tem amigo?</h2> -->
+                  <p id="resp">Sim</p> 
+                </ion-item>
+          </ion-card-content>
+            
+          <ion-card-content>
+              <h2 id="title-pront">Costuma sair com seus amigos?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                  <h2 id="title-pront">Costuma sair com seus amigos?</h2> -->
+                  <p id="resp">Não</p> 
+              </ion-item>
+          </ion-card-content>
+            
+        </ion-card>
+    
+    <ion-card>
+      <ion-card-header >
+        <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+        <h2 id="header">Vicios</h2>
+      </ion-card-header>
+        <ion-card-content>
+            <h2 id="title-pront">Fumante?</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-male" md="md-male" item-start large></ion-icon> -->
+                <!-- <h2 id="title-pront">Fumante?</h2> -->
+                <p id="resp">Sim</p>
+                <p id="resp">Ha 15 anos</p>
+            </ion-item>
+        </ion-card-content>
+        
+        <ion-card-content>
+            <h2 id="title-pront">Bebe?</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon>
+                <h2 id="title-pront">Bebe?</h2> -->
+                <p id="resp">Sim</p>
+                <p id="resp">3x por por semana</p>
+                <p id="resp">Ha 20 anos</p>
+            </ion-item>
+        </ion-card-content>
+        
+        <ion-card-content>
+            <h2 id="title-pront">Usa Drogas?</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                <h2 id="title-pront">Usa Drogas?</h2> -->
+                <p id="resp">Sim</p>
+                <p id="resp">Cocaina</p>
+                <p id="resp">3x por semanan</p> 
+                <p id="resp">Ha 10 anos</p>
+              </ion-item>
+        </ion-card-content>
+        
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header >
+          <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+          <h2 id="header">Familia</h2>
+        </ion-card-header>
+
+        <ion-card-content>
+            <h2 id="title-pront">Filho?</h2>
+            <ion-item>
+                <!-- <ion-icon ios="ios-male" md="md-male" item-start large></ion-icon> -->
+                <!-- <h2 id="title-pront">Filho?</h2> -->
+                <p id="resp">Sim</p>
+                <p id="resp">2 filhos</p>
+            </ion-item>
+        </ion-card-content>
+          
+          <ion-card-content>
+              <h2 id="title-pront">Como é a relação com a mãe de seus filhos?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-male" md="md-male" item-start large></ion-icon>
+                  <h2 id="title-pront">Como é a relação com a mãe de seus filhos?</h2>  -->
+                  <p id="resp">Ruim</p>
+              </ion-item>
+          </ion-card-content>
+          
+          <ion-card-content>
+              <h2 id="title-pront">Histórico de depressão na familia?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon>
+                  <h2 id="title-pront">Histórico de depressão na familia?</h2> -->
+                  <p id="resp">Sim</p>
+                  <p id="resp">Pai, Tia</p>
+              </ion-item>
+          </ion-card-content>
+          
+          <ion-card-content>
+              <h2 id="title-pront">Histórico de suicidio na familia?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                  <h2 id="title-pront">Histórico de suicidio na familia?</h2> -->
+                  <p id="resp">Não</p>
+                </ion-item>
+          </ion-card-content>
+          
+          <ion-card-content>
+              <h2 id="title-pront">Relação com Pai?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                  <h2 id="title-pront">Relação com Pai?</h2> -->
+                  <p id="resp">Boa</p>
+                </ion-item>
+          </ion-card-content>
+          
+          <ion-card-content>
+              <h2 id="title-pront">Relação com a Mãe?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                  <h2 id="title-pront">Relação com a Mãe?</h2> -->
+                  <p id="resp">Boa</p>
+                </ion-item>
+          </ion-card-content>
+          
+          <ion-card-content>
+              <h2 id="title-pront">Tem irmãos?</h2>
+              <ion-item>
+                  <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                  <h2 id="title-pront">Tem irmãos?</h2> -->
+                  <p id="resp">2 irmãos</p>
+                </ion-item> 
+          </ion-card-content>
+          
+          <ion-card-content>
+                <h2 id="title-pront">Como é a relação com seu(s) irmão(s)?</h2>
+                <ion-item>
+                    <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                    <h2 id="title-pront">Como é a relação com seu(s) irmão(s)?</h2> -->
+                    <p id="resp">Boa</p>
+                  </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header >
+              <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+              <h2 id="header">Saúde</h2>
+            </ion-card-header>
+              <ion-card-content>
+                  <h2 id="title-pront">Patologia?</h2>
+                  <ion-item>
+                      <!-- <ion-icon ios="ios-male" md="md-male" item-start large></ion-icon> -->
+                      <!-- <h2 id="title-pront">Fumante?</h2> -->
+                      <p id="resp">Diabetes </p>
+                      <p id="resp">Pressão alta</p>
+                      <p id="resp">Osteoporose</p>
+                  </ion-item>
+              </ion-card-content>
+              
+              <ion-card-content>
+                  <h2 id="title-pront">Medicação Atual?</h2>
+                  <ion-item>
+                      <!-- <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon>
+                      <h2 id="title-pront">Bebe?</h2> -->
+                      <p id="resp">Insulina</p>
+                      <p id="resp">teriparatida</p>
+                      <p id="resp">Furosemida</p>
+                  </ion-item>
+              </ion-card-content>
+              
+              <ion-card-content>
+                  <h2 id="title-pront">Usa Drogas?</h2>
+                  <ion-item>
+                      <!-- <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+                      <h2 id="title-pront">Usa Drogas?</h2> -->
+                      <p id="resp">Sim</p>
+                      <p id="resp">Cocaina</p>
+                      <p id="resp">3x por semanan</p> 
+                      <p id="resp">Ha 10 anos</p>
+                    </ion-item>
+              </ion-card-content>
+              
+            </ion-card>
+</ion-content>

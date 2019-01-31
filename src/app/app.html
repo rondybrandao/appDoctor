@@ -21,7 +21,16 @@
       <ion-list no-lines>
 
         <ion-item-divider color="light">
-          Navigate
+          Menu
+        </ion-item-divider>
+        <button ion-item menuClose detail-none (click)="openHome()">
+          <ion-icon item-start name="home" color="light"></ion-icon>
+          Inicio
+          <ion-icon item-end name="arrow-forward" color="light"></ion-icon>
+        </button>
+        
+        <ion-item-divider color="light">
+          Financeiro
         </ion-item-divider>
         <button ion-item menuClose detail-none *ngFor="let page of navigationPages" (click)="openPage(page)">
           <ion-icon item-start [name]="page.icon" color="light"></ion-icon>
@@ -30,23 +39,25 @@
         </button>
 
         <ion-item-divider color="light">
-          Account
+          Servicos
         </ion-item-divider>
         <button ion-item menuClose detail-none *ngFor="let page of accountPages" (click)="openPage(page)">
           <ion-icon item-start [name]="page.icon" color="light"></ion-icon>
           {{page.title}}
           <ion-icon item-end name="arrow-forward" color="light"></ion-icon>
         </button>
-        <button ion-item menuClose detail-none (click)="signIn()">
+
+        
+        <!-- <button ion-item menuClose detail-none (click)="signIn()">
           <ion-icon item-start name="log-in" color="light"></ion-icon>
           Sign In
           <ion-icon item-end name="arrow-forward" color="light"></ion-icon>
-        </button>
+        </button> -->
 
-        <ion-item-divider color="light">
+        <!-- <ion-item-divider color="light">
           Settings
-        </ion-item-divider>
-        <button ion-item menuClose detail-none *ngFor="let page of settingsPages" (click)="openPage(page)">
+        </ion-item-divider> -->
+        <!-- <button ion-item menuClose detail-none *ngFor="let page of settingsPages" (click)="openPage(page)">
           <ion-icon item-start [name]="page.icon" color="light"></ion-icon>
           {{page.title}}
           <ion-icon item-end name="arrow-forward" color="light"></ion-icon>
@@ -55,16 +66,16 @@
           <ion-icon item-start name="color-palette" color="light"></ion-icon>
           Toggle Theme
           <ion-icon item-end name="arrow-forward" color="light"></ion-icon>
-        </button>
+        </button> -->
 
-        <ion-item-divider color="light">
+        <!-- <ion-item-divider color="light">
           Legal
         </ion-item-divider>
         <button ion-item menuClose detail-none *ngFor="let page of legalPages" (click)="openPage(page)">
           <ion-icon item-start [name]="page.icon" color="light"></ion-icon>
           {{page.title}}
           <ion-icon item-end name="arrow-forward" color="light"></ion-icon>
-        </button>
+        </button> -->
 
       </ion-list>
     </ion-content>

@@ -1,17 +1,23 @@
-/**
- * The Application component for the Big Top App.
- */
-
+import { TabsPage } from './../pages/tabs/tabs';
 import { ENV } from '@env';
 
 import { Component, ViewChild } from '@angular/core';
 
-import { Content, Events, Nav, Platform } from 'ionic-angular';
+import { Content, Events, Nav, Platform, NavController } from 'ionic-angular';
 
 import { IntroductionPage } from '@pages/introduction/introduction';
 import { SignInPage } from '@pages/sign-in/sign-in';
+import { EventsPage } from './../pages/events/events';
 
 import { LoggerService } from '@services/log4ts/logger.service';
+import { ContactPage } from '@pages/contact/contact';
+import { SearchPage } from '@pages/search/search';
+import { EstatisticaPage } from '@pages/estatistica/estatistica';
+import { NuvemPage } from '@pages/nuvem/nuvem';
+import { ErpPage } from '@pages/erp/erp';
+import { TributosPage } from '@pages/tributos/tributos';
+import { DespesasPage } from '@pages/despesas/despesas';
+import { ConsultasAgendadasPage } from '@pages/consultas-agendadas/consultas-agendadas';
 
 let isDebugMode = ENV.isDebugMode;
 
@@ -34,28 +40,35 @@ export class BigTopApp {
   @ViewChild(Nav) private nav: Nav;
   @ViewChild(Content) private content: Content;
 
+  private component: any = TabsPage;
+
   public navigationPages: PageInterface[] = [
-    { title: 'Discover Events', name: 'IntroductionPage', component: IntroductionPage, icon: 'beer' }
+    { title: 'Caixa', name: 'Caixa', component: ErpPage, icon: 'cash' },
+    { title: 'Tributos', name: 'Tributos', component: TributosPage, icon: 'calculator'},
+    { title: 'Despesas', name: 'Despesas', component: DespesasPage, icon: 'trending-down'}
     // { title: 'Discover Venues', name: 'IntroductionPage', component: IntroductionPage, icon: 'person' },
   ];
 
   public accountPages: PageInterface[] = [
-    // { title: 'Sign In', name: 'SignInPage', component: SignInPage, icon: 'log-in' }
-    // { title: 'My Account', name: 'IntroductionPage', component: IntroductionPage, icon: 'person' },
-    // { title: 'Register', name: 'IntroductionPage', component: IntroductionPage, icon: 'person-add' }
+    //{ title: 'Sign In', name: 'SignInPage', component: SignInPage, icon: 'log-in' },
+    { title: 'Pacientes', name: 'PacientesPage', component: SearchPage, icon: 'person' },
+    { title: 'Agenda', name: 'Agenda', component: ConsultasAgendadasPage, icon: 'time' },
+    { title: 'Estatisticas', name: 'Estatisticas', component: EstatisticaPage, icon: 'md-pie' },
+    { title: 'Nuvem', name: 'Nuvem', component: NuvemPage, icon: 'ios-cloud' },
+    
   ];
 
   public settingsPages: PageInterface[] = [
     { title: 'Connected Services', name: 'IntroductionPage', component: IntroductionPage, icon: 'bluetooth' }
   ];
 
-  public legalPages: PageInterface[] = [
-    { title: 'Terms of Use', name: 'IntroductionPage', component: IntroductionPage, icon: 'document' },
-    { title: 'Privacy Policy', name: 'IntroductionPage', component: IntroductionPage, icon: 'body' },
-    { title: 'About Big Top', name: 'IntroductionPage', component: IntroductionPage, icon: 'information-circle' }
-  ];
+  // public legalPages: PageInterface[] = [
+  //   { title: 'Terms of Use', name: 'IntroductionPage', component: IntroductionPage, icon: 'document' },
+  //   { title: 'Privacy Policy', name: 'IntroductionPage', component: IntroductionPage, icon: 'body' },
+  //   { title: 'About Big Top', name: 'IntroductionPage', component: IntroductionPage, icon: 'information-circle' }
+  // ];
 
-  public rootPage: any = IntroductionPage;
+  public rootPage: any = SignInPage;
 
   public theme: String = 'facebook-messenger-theme';
 
@@ -76,7 +89,11 @@ export class BigTopApp {
   }
 
   public openPage(page: any) {
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
+  }
+
+  public openHome() {
+    this.nav.push(this.component);
   }
 
   public signIn() {

@@ -1,0 +1,39 @@
+page-tributos {
+    ion-row {
+        align-items: center;
+        text-align: center;
+    }
+    #row-tribute-head {
+        background-color: cadetblue !important;
+    }
+    .grid-tributo {
+        color: black;
+        background-color: beige;
+        border: solid 1px;
+    }
+
+    #row-tributo {
+        text-align: start;
+        font-size: 8px;
+    }
+    #row-total {
+        background-color: red;
+        text-align: start;
+        font-size: 14px;
+        color: white;
+    }
+
+    #row-valor {
+        background-color: red;
+        text-align: end;
+        font-size: 14px;
+        color: white;
+    }
+
+    h2 {
+        top: 7px;
+        align-items: center;
+        
+    }
+
+}

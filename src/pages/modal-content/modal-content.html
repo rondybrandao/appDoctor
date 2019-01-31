@@ -1,0 +1,182 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Informações do Paciente
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content class="cards-bg">
+  <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{character.image}}">
+        </ion-avatar>
+        <h2>{{character.name}}</h2>
+        <p>{{character.quote}}</p>
+      </ion-item>
+
+      <ion-item *ngFor="let item of character['items']">
+        
+        {{item.title}}
+        <ion-note id="item-note" item-end>
+          {{item.note}}
+        </ion-note>
+      </ion-item>
+  </ion-list>
+  
+  <ion-card>
+
+    <ion-item>
+        <ion-icon ios="ios-male" md="md-male" item-start large></ion-icon>
+        <h2>Idade</h2>
+        <p>76 anos</p>
+    </ion-item>
+    
+    <ion-item>
+        <ion-icon ios="ios-briefcase" md="md-briefcase" item-start large></ion-icon>
+        <h2>Profissão</h2>
+        <p>Mestre Jedi</p>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon ios="ios-heart" md="md-heart" item-start large></ion-icon>
+      <h2>Estado civil</h2>
+      <p>Solteiro</p>
+    </ion-item>
+    
+    
+  </ion-card>
+  
+  <ion-card>
+      
+      <!--<form [formGroup]="form">-->
+      <ion-card-header >
+          <!-- <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon> -->
+          <h2 id="header">Quadro Clinico</h2>
+      </ion-card-header>
+      
+      <!-- <ion-item>
+          <ion-icon ios="ios-medical" md="md-medical" item-start large></ion-icon>
+          <h2>Diagnostico</h2>
+          <p class="event-location">Ansiedade, Sindrome do Panico, Depressão, Fobia Social</p>
+        </ion-item>
+        <button id="edit" ion-button icon-start clear item-end color="danger" (click)="modalDiagnostico()">
+          <ion-icon ios="ios-create" md="md-create"></ion-icon>
+          Editar
+        </button>
+    
+        <ion-item>
+          <ion-icon ios="ios-flask" md="md-flask" item-start large></ion-icon> 
+          <h2>Medicação</h2>
+          <p class="event-location">Bup, Rivotril, Carbolitium, place, meeds</p>
+        </ion-item>
+        <button id="edit" ion-button icon-start clear item-end color="danger"  (click)="modalMeds()">
+          <ion-icon ios="ios-create" md="md-create"></ion-icon>
+          Editar
+        </button> -->
+        <ion-item>
+          <ion-icon ios="ios-medical" md="md-medical" item-start large></ion-icon>
+          <h2>Diagnostico</h2>
+        </ion-item>
+        
+        <ion-card-content id="card-diagnostico">
+          Ansiedade, Sindrome do Panico, Depressão, Fobia Social
+          <ion-item (click)="openQuadroClinico()">
+            <button ion-button  id="edit" icon-start clear item-end color="dark">
+              <ion-icon ios="ios-create" md="md-create" ></ion-icon>
+              Editar
+            </button>
+          </ion-item>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon ios="ios-flask" md="md-flask" item-start large></ion-icon>
+          <h2>Medicação</h2>
+        </ion-item>
+        
+        <ion-card-content id="card-diagnostico">
+          Bup, Rivotril, Carbolitium
+          <ion-item (click)="openEdit()">
+            <button ion-button  id="edit" icon-start clear item-end color="dark">
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Editar
+            </button>
+          </ion-item>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon ios="ios-pulse" md="md-pulse" item-start large ></ion-icon>
+          <h2>Evolução do quadro</h2>
+        </ion-item>
+        
+        <ion-card-content id="card-diagnostico">
+          Paciente teve melhora, apresentou evolução no tratamento com a medicação prescrita.
+          <ion-item (click)="openEdit()">
+            <button ion-button  id="edit" icon-start clear item-end color="dark">
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Editar
+            </button>
+          </ion-item>
+        </ion-card-content>
+
+        <!-- <ion-item>
+          <button ion-button full id="adicionar" (click)="openQuadroClinico()">Adcionar</button>
+        </ion-item> -->
+        
+        <ion-row no-padding>
+             <!-- <button ion-button block color="default"  icon-start>
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Historico
+            </button>  -->
+            <button ion-button block color="danger" (click)="openProntuario()">Prontuário</button>
+        </ion-row>
+        
+        
+        <!-- <ion-row no-padding>
+          <p>
+            <button ion-button color="secondary" block>Prontuário</button>
+          </p>
+        
+          <p>
+            <button ion-button color="danger" block>Histórico</button>
+          </p>
+        </ion-row> 
+      
+          <ion-col>
+            <button ion-button full color="primary" round icon-start>
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Prontuário
+            </button>
+
+            <button ion-button full color="secondary" round icon-start>
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Histórico
+            </button> 
+          </ion-col> -->
+        
+        <!--</form>-->
+    </ion-card>
+  
+  <br>
+  <h2 id="charts">Mediana dos sintomas de Setembro</h2>
+  <div style="padding-top: 10px;">
+    <canvas #chartBarCanvas width="400" height="300"></canvas>
+  </div>
+
+  <br>
+  <h2 id="charts">Acompanhamento diario</h2>
+  <div style="padding-top: 10px;">
+    <canvas #chartLineCanvas width="400" height="300"></canvas>
+  </div>
+
+  <br>
+  <h2 id="charts">O que mais pensei?</h2>
+  <img src="{{ '../../assets/imgs/nuvem/ben-01-11-2018.png' }}"/>
+</ion-content>

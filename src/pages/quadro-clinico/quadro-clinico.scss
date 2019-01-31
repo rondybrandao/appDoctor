@@ -1,0 +1,50 @@
+page-quadro-clinico {
+    .toolbar {
+        // background-color: white;
+        // background: white;
+        background-color: #488aff;
+      }
+    
+      .toolbar-title {
+        font-size: 2.0rem;
+        font-weight: bold;
+      }
+    
+      .content {
+        color: black;
+        //background-color: #4e9edb;
+      }
+      .example-headers-align .mat-expansion-panel-header-title, 
+      .example-headers-align .mat-expansion-panel-header-description {
+        flex-basis: 0;
+      }
+      .mat-expansion-panel-header{
+        background-color: firebrick;
+      } 
+      .mat-expansion-panel-header-title {
+        color: #f4f4f4;
+      }
+    
+      .example-headers-align .mat-expansion-panel-header-description {
+        justify-content: space-between;
+        align-items: center;
+      }
+      .range-md.range-has-pin {
+        padding-top: 5px;
+    }
+    
+    .card-md {
+      margin: 1px;
+      padding-right: 0;
+      width: calc(110% - 20px);
+      
+    }
+    
+    textarea {
+      overflow: auto;
+      height: auto;
+      font: inherit;
+      color: black;
+    }
+
+}

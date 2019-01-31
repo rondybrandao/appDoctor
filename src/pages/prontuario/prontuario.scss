@@ -1,0 +1,83 @@
+page-prontuario {
+    ion-header {
+        background-color: #488aff;
+    }
+
+    h2 {
+        color: white;
+    }
+    #header{
+        color: #488aff;
+    }
+    #title-pront{
+        font-size: 20px;
+        padding-left: 1px;
+    }
+    #resp{
+        font-size: 18px;
+        color:red;
+    }
+    .content-md{
+        color: red;
+        padding-left: 2px;
+        
+    }
+
+    .item-md {
+        color: #488aff;
+    }
+    .item-md [item-end] {
+        margin: 9px 8px 9px 65px;
+    }
+    .input-wrapper{
+        margin: 0 0 0 0;
+        padding-bottom: -5px;
+    }
+    
+    p.event-location{
+        height: 50px;
+        white-space: normal;
+        padding-bottom: 0px;
+    }
+    .content-md{
+        color: red;
+        
+    }
+    // .button-inner{
+    //     color: black;
+    // }
+    // .button-md {
+    //     background-color: #32db64;
+    //     color:#fff;
+    // }
+    
+    #adicionar{
+        background-color: #32db64;
+    }
+    #card-diagnostico {
+        font-size: 16px;
+    }
+    #evolucao{
+        font-size: 16px;
+        color: red;
+        padding-top: -2px;
+        padding-left: 10px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+    }
+
+    #header {
+        color: #488aff;
+    }
+    #charts {
+        color: #488aff;
+        padding-left: 15px;
+    }
+
+    #edit {
+        padding-top: -15px;
+        margin-left: 200px;
+        width: 75px;
+    }
+    
+}

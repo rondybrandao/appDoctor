@@ -1,22 +1,264 @@
-<ion-header no-border>
-
-  <ion-navbar transparent>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      <button ion-button clear icon-right color="light" (click)="toggleLocation()">
-        {{ location }}
-        <ion-icon name="arrow-down"></ion-icon>
+<ion-header>
+    <ion-toolbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
       </button>
-    </ion-title>
-  </ion-navbar>
+      <ion-title>
+        Inicio
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">
 
-</ion-header>
+          
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header> 
+
 
 <ion-content class="cards-bg">
 
-  <div *ngFor="let card of cards">
+  <ion-card>
+    <div>
+      <h2>Bom dia Dr. Freud, <b>20 pacientes</b> estão agendados para hoje, bom trabalho.</h2>
+    </div>
+  </ion-card>
+
+    <ion-card>
+
+      <img src="{{ '../../assets/imgs/events/img-saude-mental-maconha.jpg'}}"/>
+
+      <!-- <div class="fab-container">
+        <ion-fab bottom right edge>
+          <button ion-fab mini color="light" (click)="goToEvent(card)">
+            <ion-icon name="ios-open-outline"></ion-icon>
+          </button>
+        </ion-fab>
+      </div>  -->
+
+      <ion-card-content>
+          
+        <ion-row no-padding>
+            
+          <ion-col col-3 text-center>
+            <p class="month">
+              NOV
+            </p>
+            <p class="day">
+              11
+            </p>
+          </ion-col>
+          <ion-col class="event-name">
+            <strong>Estudo afirma: uso de maconha por adolescentes aumenta risco de psicose</strong>
+            <p class="event-location">
+                Estudos mostram que pessoas propensas a problemas mentais geralmente são mais atraídas por entorpecentes
+            </p>
+
+              <button ion-buttons>
+               <a href= "https://veja.abril.com.br/blog/letra-de-medico/estudo-afirma-uso-de-maconha-por-adolescentes-aumenta-risco-de-psicose/">
+                 ler mais
+               </a>  
+              </button>
+
+          </ion-col>
+        </ion-row>
+        <ion-grid>
+          <ion-row justify-content-center>
+            <ion-col col-2>
+              <div><ion-icon name="logo-twitter" item-start color="twitter"></ion-icon></div>
+            </ion-col>
+            <ion-col col-2>
+              <div><ion-icon  name="logo-facebook" md="logo-facebook" item-start color="primary"></ion-icon></div>
+            </ion-col>
+            <ion-col col-2>
+              <div><ion-icon  name="logo-whatsapp" md="logo-whatsapp" item-start color="secondary"></ion-icon></div>
+            </ion-col>
+            <ion-col col-2>
+              <div><ion-icon  name="logo-instagram" item-start color="instagram"></ion-icon></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+
+        <img src="{{ '../../assets/imgs/events/img-sexo.jpg'}}"/>
+  
+        <!-- <div class="fab-container">
+          <ion-fab bottom right edge>
+            <button ion-fab mini color="light" (click)="goToEvent(card)">
+              <ion-icon name="ios-open-outline"></ion-icon>
+            </button>
+          </ion-fab>
+        </div>  -->
+  
+        <ion-card-content>
+            
+          <ion-row no-padding>
+              
+            <ion-col col-3 text-center>
+              <p class="month">
+                NOV
+              </p>
+              <p class="day">
+                05
+              </p>
+            </ion-col>
+            <ion-col class="event-name">
+              <strong>Vício em sexo é distúrbio de saúde mental, diz OMS</strong>
+              <p class="event-location">
+                  Alguns dos sintomas do transtorno de comportamento sexual compulsivo incluem negligenciar a saúde e as responsabilidades em prol do sexo
+              </p>
+  
+                <button ion-buttons>
+                 <a href= "https://veja.abril.com.br/saude/vicio-em-sexo-e-disturbio-de-saude-mental-diz-oms/">
+                   ler mais
+                 </a>  
+                </button>
+  
+            </ion-col>
+          </ion-row>
+          <ion-grid>
+            <ion-row justify-content-center>
+              <ion-col col-2>
+                <div><ion-icon name="logo-twitter" item-start color="twitter"></ion-icon></div>
+              </ion-col>
+              <ion-col col-2>
+                <div><ion-icon  name="logo-facebook" md="logo-facebook" item-start color="primary"></ion-icon></div>
+              </ion-col>
+              <ion-col col-2>
+                <div><ion-icon  name="logo-whatsapp" md="logo-whatsapp" item-start color="secondary"></ion-icon></div>
+              </ion-col>
+              <ion-col col-2>
+                <div><ion-icon  name="logo-instagram" item-start color="instagram"></ion-icon></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+  
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+
+          <img src="{{ '../../assets/imgs/events/img-ansiedade.jpeg'}}"/>
+    
+          <!-- <div class="fab-container">
+            <ion-fab bottom right edge>
+              <button ion-fab mini color="light" (click)="goToEvent(card)">
+                <ion-icon name="ios-open-outline"></ion-icon>
+              </button>
+            </ion-fab>
+          </div>  -->
+    
+          <ion-card-content>
+              
+            <ion-row no-padding>
+                
+              <ion-col col-3 text-center>
+                <p class="month">
+                  OUT
+                </p>
+                <p class="day">
+                  29
+                </p>
+              </ion-col>
+              <ion-col class="event-name">
+                <strong>Ataque de pânico: sete dicas de especialistas para controlar as crises</strong>
+                <p class="event-location">
+                    Entre as sugestões está ouvir música, evitar a cafeína e se concentrar na respiração
+                </p>
+    
+                  <button ion-buttons>
+                   <a href= "https://veja.abril.com.br/saude/as-sete-maneiras-de-controlar-um-ataque-de-panico/">
+                     ler mais
+                   </a>  
+                  </button>
+    
+              </ion-col>
+            </ion-row>
+            <ion-grid>
+              <ion-row justify-content-center>
+                <ion-col col-2>
+                  <div><ion-icon name="logo-twitter" item-start color="twitter"></ion-icon></div>
+                </ion-col>
+                <ion-col col-2>
+                  <div><ion-icon  name="logo-facebook" md="logo-facebook" item-start color="primary"></ion-icon></div>
+                </ion-col>
+                <ion-col col-2>
+                  <div><ion-icon  name="logo-whatsapp" md="logo-whatsapp" item-start color="secondary"></ion-icon></div>
+                </ion-col>
+                <ion-col col-2>
+                  <div><ion-icon  name="logo-instagram" item-start color="instagram"></ion-icon></div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+    
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+
+            <img src="{{ '../../assets/imgs/events/img-news-mapa-fisico.jpg'}}"/>
+      
+            <!-- <div class="fab-container">
+              <ion-fab bottom right edge>
+                <button ion-fab mini color="light" (click)="goToEvent(card)">
+                  <ion-icon name="ios-open-outline"></ion-icon>
+                </button>
+              </ion-fab>
+            </div>  -->
+      
+            <ion-card-content>
+                
+              <ion-row no-padding>
+                  
+                <ion-col col-3 text-center>
+                  <p class="month">
+                    OUT
+                  </p>
+                  <p class="day">
+                    25
+                  </p>
+                </ion-col>
+                <ion-col class="event-name">
+                  <strong>Sentimentos são mapeados</strong>
+                  <p class="event-location">
+                      Pesquisa realizada com mais de mil pessoas permitiu que pesquisadores finlandeses localizassem em que parte do nosso corpo sentimos cada sensação
+                  </p>
+      
+                    <button ion-buttons>
+                     <a href= "https://revistagalileu.globo.com/Ciencia/noticia/2018/09/sentimentos-sao-mapeados-para-entender-sua-influencia-no-bem-estar.html">
+                       ler mais
+                     </a>  
+                    </button>
+      
+                </ion-col>
+              </ion-row>
+              <ion-grid>
+                <ion-row justify-content-center>
+                  <ion-col col-2>
+                    <div><ion-icon name="logo-twitter" item-start color="twitter"></ion-icon></div>
+                  </ion-col>
+                  <ion-col col-2>
+                    <div><ion-icon  name="logo-facebook" md="logo-facebook" item-start color="primary"></ion-icon></div>
+                  </ion-col>
+                  <ion-col col-2>
+                    <div><ion-icon  name="logo-whatsapp" md="logo-whatsapp" item-start color="secondary"></ion-icon></div>
+                  </ion-col>
+                  <ion-col col-2>
+                    <div><ion-icon  name="logo-instagram" item-start color="instagram"></ion-icon></div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+      
+            </ion-card-content>
+          </ion-card>
+
+  
+
+  <!-- <div *ngFor="let card of cards">
 
     <ion-card>
 
@@ -28,11 +270,12 @@
             <ion-icon name="ios-open-outline"></ion-icon>
           </button>
         </ion-fab>
-      </div>
+      </div> 
 
       <ion-card-content>
+          
         <ion-row no-padding>
-
+            
           <ion-col col-3 text-center>
             <p class="month">
               {{ card.month }}
@@ -42,18 +285,40 @@
             </p>
           </ion-col>
           <ion-col class="event-name">
-            {{ card.name }}
+            <strong>{{ card.name }}</strong>
             <p class="event-location">
               {{ card.location }}
             </p>
+
+              <button ion-buttons>
+               <a href= "{{ card.href }}">
+                 ler mais
+               </a>  
+              </button>
+
           </ion-col>
-
         </ion-row>
-      </ion-card-content>
+        <ion-grid>
+          <ion-row justify-content-center>
+            <ion-col col-2>
+              <div><ion-icon name="logo-twitter" item-start color="twitter"></ion-icon></div>
+            </ion-col>
+            <ion-col col-2>
+              <div><ion-icon  name="logo-facebook" md="logo-facebook" item-start color="primary"></ion-icon></div>
+            </ion-col>
+            <ion-col col-2>
+              <div><ion-icon  name="logo-whatsapp" md="logo-whatsapp" item-start color="secondary"></ion-icon></div>
+            </ion-col>
+            <ion-col col-2>
+              <div><ion-icon  name="logo-instagram" item-start color="instagram"></ion-icon></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
+      </ion-card-content>
     </ion-card>
 
-  </div>
+  </div> -->
 
 
 </ion-content>
