@@ -1,16 +1,13 @@
-<ion-header no-border>
-
-  <ion-navbar transparent>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-     Pacientes Agendados
-    </ion-title>
-  </ion-navbar>
-
-</ion-header>
-
+<ion-header>
+    <ion-toolbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Pacientes Agendados
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content class="outer-content">
   <ion-list>
@@ -35,17 +32,9 @@
         <p>Benjamin Button</p>
       </ion-item>
       <ion-item-options>
-        <button ion-button color="light" icon-start>
-          <ion-icon name="ios-more"></ion-icon>
-          info
-        </button>
-        <button ion-button color="primary" icon-start>
-          <ion-icon name="text"></ion-icon>
-          msg
-        </button>
-        <button ion-button color="secondary" icon-start>
-          <ion-icon name="call"></ion-icon>
-          ligar
+        <button ion-button color="primary" icon-start (click)="openTratamento()">
+          <ion-icon name="medkit"></ion-icon>
+          Tratar
         </button>
       </ion-item-options>
     </ion-item-sliding>
@@ -149,7 +138,6 @@
   </ion-list>
 
   <ion-list>
-    
       <div id="data-div">
         <p>29/01/2019</p>
       </div>
@@ -204,8 +192,8 @@
 
   </ion-list>
 
+  
   <ion-list>
-    
       <div id="data-div">
         <p>30/01/2019</p>
       </div>
@@ -219,18 +207,11 @@
         <p>Finn Von Turing</p>
       </ion-item>
       <ion-item-options>
-        <button ion-button color="light" icon-start>
-          <ion-icon name="ios-more"></ion-icon>
-          More
-        </button>
         <button ion-button color="primary" icon-start>
-          <ion-icon name="text"></ion-icon>
-          msg
+          <ion-icon name="flask"></ion-icon>
+          Tratamento
         </button>
-        <button ion-button color="secondary" icon-start>
-          <ion-icon name="call"></ion-icon>
-          ligar
-        </button>
+        
       </ion-item-options>
     </ion-item-sliding>
 

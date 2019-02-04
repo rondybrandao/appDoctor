@@ -54,7 +54,7 @@ export class BigTopApp {
     { title: 'Pacientes', name: 'PacientesPage', component: SearchPage, icon: 'person' },
     { title: 'Agenda', name: 'Agenda', component: ConsultasAgendadasPage, icon: 'time' },
     { title: 'Estatisticas', name: 'Estatisticas', component: EstatisticaPage, icon: 'md-pie' },
-    { title: 'Nuvem', name: 'Nuvem', component: NuvemPage, icon: 'ios-cloud' },
+    { title: 'Tratamentos', name: 'Nuvem', component: NuvemPage, icon: 'ios-cloud' },
     
   ];
 

@@ -19,7 +19,6 @@ import { EventsPage } from '@pages/events/events';
 import { SearchPage } from '@pages/search/search';
 import { ContactPage } from './../pages/contact/contact';
 import { PatientsSevice } from '@services/patients/patients-service';
-import { ModalEditPage } from '@pages/modal-edit/modal-edit';
 import { NuvemPage } from '@pages/nuvem/nuvem';
 import { EstatisticaPage } from '@pages/estatistica/estatistica';
 import { ProntuarioPage } from '@pages/prontuario/prontuario';
@@ -27,6 +26,13 @@ import { ErpPage } from '@pages/erp/erp';
 import { TributosPage } from '@pages/tributos/tributos';
 import { DespesasPage } from '@pages/despesas/despesas';
 import { ConsultasAgendadasPage } from '@pages/consultas-agendadas/consultas-agendadas';
+import { TratamentoPage } from '@pages/tratamento/tratamento';
+
+//Modal
+import { ModalExamePage } from '@pages/modal-exame/modal-exame';
+import { ModalEditPage } from '@pages/modal-edit/modal-edit';
+import { ModalContentPage } from '@pages/modal-content/modal-content';
+
 
 // Logging Services
 import { LoggerService } from '@services/log4ts/logger.service';
@@ -49,14 +55,14 @@ import {
   MatIconRegistry,
   MatSelectModule
 } from '@angular/material';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatFormFieldModule} from '@angular/material/form-field';
 
-//modal
-import { ModalContentPage } from '@pages/modal-content/modal-content';
 
 //firebase
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 
 //import { DialogOverviewExampleDialog } from '@pages/modal-content/DialogOverviewExampleDialog';
 
@@ -73,6 +79,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ContactPage,
     ModalContentPage,
     ModalEditPage,
+    ModalExamePage,
     QuadroClinicoPage,
     NuvemPage,
     EstatisticaPage,
@@ -80,7 +87,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ErpPage, 
     TributosPage,
     DespesasPage,
-    ConsultasAgendadasPage
+    ConsultasAgendadasPage,
+    TratamentoPage
 
   ],
   imports: [
@@ -126,6 +134,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ContactPage,
     ModalContentPage,
     ModalEditPage,
+    ModalExamePage,
     QuadroClinicoPage,
     NuvemPage,
     EstatisticaPage, 
@@ -133,7 +142,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ErpPage,
     TributosPage,
     DespesasPage,
-    ConsultasAgendadasPage
+    ConsultasAgendadasPage,
+    TratamentoPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

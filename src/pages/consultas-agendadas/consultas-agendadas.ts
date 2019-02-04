@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TratamentoPage } from '@pages/tratamento/tratamento';
 
 /**
  * Generated class for the ConsultasAgendadasPage page.
@@ -20,6 +21,10 @@ export class ConsultasAgendadasPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConsultasAgendadasPage');
+  }
+
+  public openTratamento() {
+    this.navCtrl.push(TratamentoPage)
   }
 
 }
